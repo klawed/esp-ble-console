@@ -42,14 +42,22 @@ ESP32 GND        ──> Device GND
 
 ## Installation
 
-### Option 1: PlatformIO
+### Option 1: Web Installation (Recommended)
+Visit the project's installation page: **https://klawed.github.io/esp-ble-console/**
+
+1. Connect your ESP32 via USB
+2. Click "Install ESP32 Console Bridge"
+3. Select your device and follow the prompts
+4. Done! No software installation needed.
+
+### Option 2: PlatformIO
 ```bash
 git clone https://github.com/klawed/esp-ble-console.git
 cd esp-ble-console
 pio run -e esp32dev -t upload
 ```
 
-### Option 2: Arduino IDE
+### Option 3: Arduino IDE
 1. Copy `src/main.cpp` content to a new Arduino sketch
 2. Install "ESP32 BluetoothSerial" library if not already included
 3. Select your ESP32 board and upload

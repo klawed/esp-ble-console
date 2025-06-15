@@ -30,8 +30,8 @@ void setup() {
   // Initialize Pi UART (115200 is standard for Pi console)
   PiSerial.begin(115200, SERIAL_8N1, RX_PIN, TX_PIN);
   
-  // Initialize Bluetooth
-  if (!SerialBT.begin("ESP32-Console")) {
+  // Initialize Bluetooth with a descriptive name
+  if (!SerialBT.begin("Pi Console Bridge")) {
     Serial.println("Failed to initialize Bluetooth");
     // Blink error pattern
     while(1) {
@@ -44,7 +44,7 @@ void setup() {
   
   Serial.println("ESP32 Bluetooth UART Bridge");
   Serial.println("=============================");
-  Serial.println("Device: ESP32-Console");
+  Serial.println("Device: Pi Console Bridge");
   Serial.println("Waiting for Bluetooth connection...");
   Serial.println("");
   Serial.println("Hardware connections:");
